@@ -1,0 +1,18 @@
+# [START runtime]
+runtime: python27
+threadsafe: yes
+# [END runtime]
+
+handlers:
+- url: /_ah/spi/.*
+  script: main.application
+- url: /(.*\.(js|map|css|png))$
+  static_files: dist/\1
+  upload: dist/.*\.(js|map|css|png)$
+- url: .*
+  static_files: dist/index.html
+  upload: dist/index.html
+
+libraries:
+- name: endpoints
+  version: 1.0

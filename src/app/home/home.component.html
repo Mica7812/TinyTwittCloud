@@ -1,0 +1,35 @@
+<div class="container">
+<div class="page-header">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div class="bs-component">
+<form [formGroup]="rForm" (ngSubmit)="addTweet(rForm.value)">
+  <div class="form-group">
+      <label>Name</label>
+        <select formControlName="name" class="form-control" style="width:200px">
+        <option value="Mica">Mica (100.000+ followers)</option>
+        <option value="Ilter">Ilter (10.000 followers)</option>
+        <option value="Isil">Isil (5000 followers)</option>
+        <option value="Adam">Adam (1000 followers)</option>
+        <option value="Pierre">Pierre (100 followers)</option>
+        <option value="Gollum">Gollum (0 follower)</option>
+        </select>
+      <label>Tweet</label>
+      <textarea formControlName="body" class="form-control" style="width:600px"></textarea>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Send Tweet!" [disabled]="!rForm.valid" >
+</form>
+</div>
+
+  <div class="form-container" *ngFor="let exec of executionTime">
+    <div class="row align-items-center justify-content-center">
+        <p>Tweet sent!</p>
+    </div>
+    <div class="row align-items-center justify-content-center">
+          <p>Execution time: {{ exec }} milliseconds</p>
+        </div>
+  </div>
+</div>

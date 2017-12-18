@@ -1,0 +1,26 @@
+<div class="container">
+<div class="bs-component">
+<form *ngIf="!name" [formGroup]="rForm" (ngSubmit)="goToUser(rForm.value)">
+  <div class="form-group">
+      <label>Select a user:</label>
+        <select formControlName="name" class="form-control" style="width:200px">
+        <option value="Isil">Isil</option>
+        </select>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Get Tweets!" [disabled]="!rForm.valid">
+</form>
+
+<div class="row align-items-center justify-content-center" *ngIf="executionTime">
+  <p>Execution time: {{ executionTime }} milliseconds.</p>
+</div>
+<div *ngIf="feed">
+<h2>Welcome {{name}}. Here are the rumours:</h2>
+    <div *ngFor="let tweet of feed | orderBy: 'created':true " class="card bg-light mb-3" style="max-width: 70%;margin:auto;">
+                    <div class="card-header"><span><b>{{ tweet.parent }}</b></span> - {{ tweet.created | date:'mediumDate' }}</div>
+                    <div class="card-body">
+                      <p class="card-text">{{ tweet.body }}</p>
+                    </div>
+    </div>
+</div>
+</div>
+</div>

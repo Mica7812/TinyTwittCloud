@@ -1,0 +1,73 @@
+import { Component, OnInit } from '@angular/core';
+
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+
+import { Http, Response } from '@angular/http';
+
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Observable } from 'rxjs/Observable';
+
+import { Tweet } from './models/tweet';
+
+import { TweetService } from './tweet.service';
+
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  providers: [TweetService]
+})
+export class AppComponent implements OnInit {
+
+  /* FORM */
+  rForm: FormGroup;
+  post:any;
+  message:string;
+  name:string;
+
+  title = "TinyTwitt";
+  myData:any[];
+  tweets: Tweet;
+  nextPage: string;
+
+
+  constructor(private http:HttpClient, private fb:FormBuilder, private tweetService: TweetService){
+      this.rForm = fb.group({
+        'name': [null, Validators.required],
+        'message': [null, Validators.compose([Validators.required, Validators.minLength(30), Validators.maxLength(140)])]
+      })
+  }
+
+  addTweet(tweet):void{
+    this.message = tweet.message;
+    this.name = tweet.name;
+
+    const req = this.http.post('https://tinytwittcloudpr-1512468252062.appspot.com/_ah/api/tweet/v1/tweet', {
+    name: tweet.name,
+    message: tweet.message
+  }).subscribe(
+    res => {
+      console.log(res),
+      this.tweets.items.push(res),
+      this.rForm.reset();
+      err => {
+        console.log("error");
+      }
+    }
+  );
+  }
+
+  ngOnInit(): void{
+    this.tweetService.getTweets()
+  .subscribe(
+    tweets => {this.tweets = tweets,
+      this.nextPage = tweets.nextPageToken,
+       console.log("What do we have?: ", tweets.items),
+        this.myData = tweets.items
+      },
+    error =>  console.log(<any>error)
+  );
+  }
+}

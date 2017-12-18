@@ -1,0 +1,27 @@
+body{
+  width:100%
+}
+h2{
+  text-align:center;
+}
+
+.fa-twitter {
+      color: white;
+      font-size: 22pt;
+      width:32px;
+}
+.card-header{
+  background-color: #158CBA;
+  color:#fff;
+
+}
+.card-header span{
+  font-size:14pt;
+}
+.card-text{
+  font-size:12pt;
+}
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}

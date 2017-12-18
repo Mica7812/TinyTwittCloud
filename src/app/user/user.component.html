@@ -1,0 +1,42 @@
+<div class="container">
+<form *ngIf="!name" [formGroup]="rForm" (ngSubmit)="goToUser(rForm.value)">
+  <div class="form-group align-items-center">
+      <label>Select a user:</label>
+        <select formControlName="name" class="form-control" style="width:200px">
+        <option value="Mica">Mica (100.000+ followers)</option>
+        <option value="Ilter">Ilter (10.000 followers)</option>
+        <option value="Isil">Isil (5000 followers)</option>
+        <option value="Adam">Adam (1000 followers)</option>
+        <option value="Pierre">Pierre (100 followers)</option>
+        <option value="Gollum">Gollum (0 follower)</option>
+        </select>
+        <label>Number of tweets:</label>
+        <select formControlName="limit" class="form-control" style="width:66px">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        </select>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Get Tweets!" [disabled]="!rForm.valid">
+</form>
+<div *ngIf="name">
+<h2>Here's what {{name}} says:</h2>
+<div class="row align-items-center justify-content-center" *ngIf="executionTime">
+  <p>Execution time: {{ executionTime }} milliseconds.</p>
+</div>
+<div *ngIf="result" class="test">
+    <!--<div *ngFor="let tweet of result | orderBy: 'created':true " class="tweet">
+      <span><b>{{ name }}</b> - {{ tweet.created | date:'mediumDate' }}</span>
+      <p class="tweet-body">{{ tweet.body }}</p>
+      <p>{{formatedDate}}</p>
+    </div>-->
+    <div *ngFor="let tweet of result | orderBy: 'created':true " class="card bg-light mb-3" style="max-width: 70%;margin:auto;">
+                    <div class="card-header"><span><b>{{ name }}</b></span> - {{ tweet.created | date:'mediumDate' }}</div>
+                    <div class="card-body">
+                      <p class="card-text">{{ tweet.body }}</p>
+                    </div>
+    </div>
+</div>
+</div>
+</div>
