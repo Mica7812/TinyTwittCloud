@@ -85,3 +85,27 @@ Exécuter la commande `npm install` afin d'installer les librairies requises.
 Exécuter `ng serve --open` afin de lancer le serveur local.
 
 ## Temps d'exécution des requêtes HTTP
+
+Chaque temps est une moyenne sur 30 mesures.
+
+### Temps d'exécution des ajouts de tweets :
+Ajout d'un tweet avec un compte ayant :
+- 100 followers : 167.27ms
+- 1000 followers : 159.53ms
+- 5000 followers : 188.17ms
+
+### Temps d'exécution de l'affichages de 10 tweets :
+Affichage de 10 tweets depuis un compte ayant :
+- 100 followers : 162.00ms
+- 1000 followers : 143.73ms
+- 5000 followers : 159.93ms
+
+Affichage de 50 tweets depuis un compte ayant :
+- 100 followers : 213.93ms
+- 1000 followers : 193.23ms
+- 5000 followers : 244.43ms
+
+Affichage de 100 tweets depuis un compte ayant :
+- 100 followers : 306.57ms
+- 1000 followers : 300.87ms
+- 5000 followers : 299.83ms
