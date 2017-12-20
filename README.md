@@ -10,7 +10,7 @@ L'objectif de ce projet est d'émuler une application web similaire à Twitter.
 
 Le modèle sur lequel se base ce projet est celui du publieur-abonné (publisher-subscriber). Ce modèle décrit des situations typiques de microblogging, dans lesquelles un nombre n de publieurs génèrent des messages lisibles pour un nombre équivalent d'abonnés.
 
-Le modèle de base de données relationelle ne permet pas de supporter le modèle publieur-abonné. Pour remedier à ce problème, Google a proposé le Datastore, une base de données NoSQL stockant les données de manière ordonnées et permettant d'effectuer des "merge joins" à l'aide de clés. Ces clés permettent d'attribuer des propriétés parent/enfant aux entités de la base données afin de faciliter l'accès.
+Le modèle de base de données relationelle ne permet pas de supporter le modèle publieur-abonné. Pour remedier à ce problème, Google a proposé le Datastore, une base de données NoSQL stockant les données de manière ordonnée et permettant d'effectuer des "merge joins" à l'aide de clés. Ces clés permettent d'attribuer des propriétés parent/enfant aux entités de la base données afin de faciliter l'accès.
 
 Voici comment nous avons implémenté cette architecture. 
 
@@ -88,27 +88,27 @@ Exécuter `ng serve --open` afin de lancer le serveur local.
 
 ## Temps d'exécution des requêtes HTTP
 
-Chaque temps est une moyenne sur 30 mesures. (écart-type , variance)
+Chaque temps est une moyenne sur 30 mesures. (écart-type, variance)
 
 ### Temps d'exécution des ajouts de tweets :
 Ajout d'un tweet avec un compte ayant :
-- 100 followers : 167.27ms    (41.39 , 1712.80)
-- 1000 followers : 159.53ms    (39.90 , 1592.33)
-- 5000 followers : 188.17ms    (105.95 , 11225)
+- 100 followers : 167.27ms    (41.39, 1712.80)
+- 1000 followers : 159.53ms    (39.90, 1592.33)
+- 5000 followers : 188.17ms    (105.95, 11225.00)
 
 ### Temps d'exécution de l'affichage des tweets :
 Affichage de 10 tweets depuis un compte ayant :
-- 100 followers : 162.00ms    (42.94 , 1844.07)
-- 1000 followers : 143.73ms    (39.91 , 1592.96)
-- 5000 followers : 159.93ms    (31.32 , 981.24)
+- 100 followers : 162.00ms    (42.94, 1844.07)
+- 1000 followers : 143.73ms    (39.91, 1592.96)
+- 5000 followers : 159.93ms    (31.32, 981.24)
 
 Affichage de 50 tweets depuis un compte ayant :
-- 100 followers : 213.93ms    (49.02 , 2402.82)
-- 1000 followers : 193.23ms    (82.59 , 6821.43)
-- 5000 followers : 244.43ms    (47.52 , 2257.91)
+- 100 followers : 213.93ms    (49.02, 2402.82)
+- 1000 followers : 193.23ms    (82.59, 6821.43)
+- 5000 followers : 244.43ms    (47.52, 2257.91)
 
 Affichage de 100 tweets depuis un compte ayant :
-- 100 followers : 306.57ms    (55.84 , 3118.32)
-- 1000 followers : 300.87ms    (50.50 , 2550.28)
-- 5000 followers : 299.83ms    (47.41 , 2247.57)
+- 100 followers : 306.57ms    (55.84, 3118.32)
+- 1000 followers : 300.87ms    (50.50, 2550.28)
+- 5000 followers : 299.83ms    (47.41, 2247.57)
 
