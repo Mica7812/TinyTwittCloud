@@ -92,8 +92,8 @@ Chaque temps est une moyenne sur 30 mesures. (écart-type , variance)
 
 ### Temps d'exécution des ajouts de tweets :
 Ajout d'un tweet avec un compte ayant :
-- 100 followers : 167.27ms    (41.39 , 1712.8)
-- 1000 followers : 159.53ms    (39.9 , 1592.33)
+- 100 followers : 167.27ms    (41.39 , 1712.80)
+- 1000 followers : 159.53ms    (39.90 , 1592.33)
 - 5000 followers : 188.17ms    (105.95 , 11225)
 
 ### Temps d'exécution de l'affichage des tweets :
@@ -109,6 +109,6 @@ Affichage de 50 tweets depuis un compte ayant :
 
 Affichage de 100 tweets depuis un compte ayant :
 - 100 followers : 306.57ms    (55.84 , 3118.32)
-- 1000 followers : 300.87ms    (50.5 , 2550.28)
+- 1000 followers : 300.87ms    (50.50 , 2550.28)
 - 5000 followers : 299.83ms    (47.41 , 2247.57)
 
