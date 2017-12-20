@@ -2,6 +2,9 @@
 
 Contribuants : **Mica Ménard, Robin Wibaux et Quentin LeGouvello**
 
+- [Application](http://tinytwittcloudpr-1512468252062.appspot.com/)
+- [API Google Cloud Endpoints](https://apis-explorer.appspot.com/apis-explorer/?base=https://tinytwittcloudpr-1512468252062.appspot.com/_ah/api#p/)
+
 
 ## Le projet
 
@@ -92,23 +95,23 @@ Chaque temps est une moyenne sur 30 mesures. (écart-type, variance)
 
 ### Temps d'exécution des ajouts de tweets :
 Ajout d'un tweet avec un compte ayant :
-- 100 followers : 167.27ms    (41.39, 1712.80)
-- 1000 followers : 159.53ms    (39.90, 1592.33)
-- 5000 followers : 188.17ms    (105.95, 11225.00)
+- 100 followers : 167.27 ms    (41.39, 1712.8)
+- 1000 followers : 159.53 ms    (39.9, 1592.33)
+- 5000 followers : 188.17 ms    (105.95, 11225)
 
 ### Temps d'exécution de l'affichage des tweets :
 Affichage de 10 tweets depuis un compte ayant :
-- 100 followers : 162.00ms    (42.94, 1844.07)
-- 1000 followers : 143.73ms    (39.91, 1592.96)
-- 5000 followers : 159.93ms    (31.32, 981.24)
+- 100 followers : 162.00 ms    (42.94, 1844.07)
+- 1000 followers : 143.73 ms    (39.91, 1592.96)
+- 5000 followers : 159.9 3ms    (31.32, 981.24)
 
 Affichage de 50 tweets depuis un compte ayant :
-- 100 followers : 213.93ms    (49.02, 2402.82)
-- 1000 followers : 193.23ms    (82.59, 6821.43)
-- 5000 followers : 244.43ms    (47.52, 2257.91)
+- 100 followers : 213.93 ms    (49.02, 2402.82)
+- 1000 followers : 193.23 ms    (82.59, 6821.43)
+- 5000 followers : 244.43 ms    (47.52, 2257.91)
 
 Affichage de 100 tweets depuis un compte ayant :
-- 100 followers : 306.57ms    (55.84, 3118.32)
-- 1000 followers : 300.87ms    (50.50, 2550.28)
-- 5000 followers : 299.83ms    (47.41, 2247.57)
+- 100 followers : 306.57 ms    (55.84, 3118.32)
+- 1000 followers : 300.87 ms    (50.5, 2550.28)
+- 5000 followers : 299.83 ms    (47.41, 2247.57)
 
