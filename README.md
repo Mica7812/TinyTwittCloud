@@ -1,6 +1,6 @@
 # TinyTwittCloud Project
 
-Contribuants : Mica Ménard, Robin Wibaux et Quentin LeGouvello
+Contribuants : **Mica Ménard, Robin Wibaux et Quentin LeGouvello**
 
 
 ## Le projet
