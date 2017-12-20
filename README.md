@@ -10,7 +10,7 @@ L'objectif de ce projet est d'émuler une application web similaire à Twitter.
 
 Le modèle sur lequel se base ce projet est celui du publieur-abonné (publisher-subscriber). Ce modèle décrit des situations typiques de microblogging, dans lesquelles un nombre n de publieurs génèrent des messages lisibles pour un nombre équivalent d'abonnés.
 
-Le modèle de base de données relationelle ne permet pas de supporter le modèle publieur-abonné. Pour remedier à ce problème, Google a proposé le Datastore, une base de données NoSQL stockant les données de manière ordonnées et permettant d'effectuer des "merge joins" à l'aide de clés. Ces clés permettent d'attribuer des propriétés parent/enfant aux entités de la base données afin de faciliter l'accès.
+Le modèle de base de données relationelle ne permet pas de supporter le modèle publieur-abonné. Pour remedier à ce problème, Google a proposé le Datastore, une base de données NoSQL stockant les données de manière ordonnée et permettant d'effectuer des "merge joins" à l'aide de clés. Ces clés permettent d'attribuer des propriétés parent/enfant aux entités de la base données afin de faciliter l'accès.
 
 Voici comment nous avons implémenté cette architecture. 
 
