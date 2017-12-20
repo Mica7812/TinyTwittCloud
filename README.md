@@ -1,5 +1,7 @@
 # TinyTwittCloud Project
 
+Contribuants : Mica Ménard, Robin Wibaux et Quentin LeGouvello
+
 
 ## Le projet
 
@@ -94,7 +96,7 @@ Ajout d'un tweet avec un compte ayant :
 - 1000 followers : 159.53ms
 - 5000 followers : 188.17ms
 
-### Temps d'exécution de l'affichages de 10 tweets :
+### Temps d'exécution de l'affichage des tweets :
 Affichage de 10 tweets depuis un compte ayant :
 - 100 followers : 162.00ms
 - 1000 followers : 143.73ms
